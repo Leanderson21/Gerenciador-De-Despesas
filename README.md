@@ -26,12 +26,22 @@ CRUD gestão de despesas com Java Spring
     
     #Inserindo Nova Despesa
     
-   
   <img src="media/adicionar.jpg" alt="Minha Figura">
-  <figcaption>Adicionar despesas</figcaption>
+  <figcaption>Modal Adicionar despesas</figcaption>
+    
+   
+    
+  #Visualizando uma despesa da lista
+    
+  <img src="media/detalhe.jpg" alt="Minha Figura">
+  <figcaption>Detalhes de uma despesas</figcaption>
     
     
     
+  #editando uma despesa da lista
+    
+  <img src="media/editar.jpg" alt="Minha Figura">
+  <figcaption>Modal Edição de despesa</figcaption>
     
     
   </body>
