@@ -1,7 +1,7 @@
 # Gerenciados-De-Despesas
 CRUD gestão de despesas com Java Spring
 
-<!doctype html>
+
 <html lang="pt-br">
   <head>
     <!-- Required meta tags -->
@@ -17,10 +17,10 @@ CRUD gestão de despesas com Java Spring
     Tabela contendo todas as despesas registradas
     Visualização do valor total de despesas
     
-    <figure>
+   
   <img src="media/index.jpg" alt="Minha Figura">
-  <figcaption>Informações da Figura</figcaption>
-</figure>
+  <figcaption>Tabela de despesas</figcaption>
+
     
     
     
