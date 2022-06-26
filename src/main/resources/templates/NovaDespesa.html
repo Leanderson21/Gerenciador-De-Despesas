@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <title>New Despesa</title>
+  </head>
+  <body>
+    
+<div class="container">
+<form th:action="@{/salvar}" method="POST">
+<label>Nome da despesa</label>
+<input class="form-control" type="text" name="nome_despesa">
+<label>Descrição da despesa</label>
+<input class="form-control" type="text" name="descricao_despesa">
+<label>Data de vencimento da despesa</label>
+<input class="form-control" type="date" name="Data_vencimento">
+<label>Data de pagamento da despesa</label>
+<input class="form-control" type="date" name="Data_pagamento">
+<label>Nome da despesa</label>
+<input class="form-control" type="text" name="valor_despesa">
+<input type="submit" value="salvar">
+</form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

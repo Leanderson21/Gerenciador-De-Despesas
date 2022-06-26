@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <title>New Blog</title>
+  </head>
+  <body>
+    
+<div class="container mt-3" style="width:60%" >
+
+<a href="/listar"><button type="button"   class="btn btn-success 
+fa fa-dedent mt-3"></button></a>
+
+<button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success 
+fa fa-pencil-square-o mt-3"></button>
+
+
+<div class="card mt-3" th:each="despesa : ${despesa}">
+  <div class="card-header" >
+    <span th:text="${despesa.nome_despesa}"> </span>
+  
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    
+    <p class="card-text"><span th:text="${despesa.descricao_despesa}"></span></p>
+    <p class="card-text"><span th:text="${#temporals.format(despesa.Data_vencimento,'dd/MM/yyyy')}"></span></p>
+    <p class="card-text"><span th:text="${#temporals.format(despesa.Data_pagamento,'dd/MM/yyyy')}"></span></p>
+ 
+  </div>
+  
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Despesa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form th:action="@{/editar}" method="POST">
+        
+         <input type="hidden" name="id_despesa" th:value="${despesa.id_despesa}">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Nome da despesa:</label>
+            <input type="text" class="form-control" id="recipient-name" name="nome_despesa" th:value="${despesa.nome_despesa}">
+          </div>
+           <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Descrição da despesa:</label>
+            <input type="text" class="form-control" id="recipient-name" name="descricao_despesa" th:value="${despesa.descricao_despesa}">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Data Vencimento da despesa:</label>
+            <input type="date" class="form-control" id="recipient-name" name="Data_vencimento" th:value="${#temporals.format(despesa.Data_vencimento,'yyyy-MM-dd')}">
+          </div>
+           <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Data Pagamento da despesa:</label>
+            <input type="Date" class="form-control"  id="recipient-name" name="Data_pagamento"  th:value="${#temporals.format(despesa.Data_pagamento,'yyyy-MM-dd')}">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Valor da despesa:</label>
+            <input type="text" class="form-control" id="recipient-name" name="valor_despesa" th:value="${despesa.valor_despesa}">
+          </div>
+          
+          
+          <input type="submit"  class="btn btn-success" value="salvar">
+        </form>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>  
+  
+  
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
