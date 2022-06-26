@@ -17,7 +17,7 @@ CRUD gestão de despesas com Java Spring
     <h2>Tabela contendo todas as despesas registradas</h2>
     <h2>Visualização do valor total de despesas</h2>
     
-    <img src="index.jpg" alt="Minha Figura">
+    <img src="media/index.jpg" alt="Minha Figura">
     
     
     
