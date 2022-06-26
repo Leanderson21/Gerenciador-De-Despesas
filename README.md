@@ -18,7 +18,7 @@ CRUD gestão de despesas com Java Spring
     <h2>Visualização do valor total de despesas</h2>
     
     <figure>
-  <img src="media/imagem.jpg" alt="Minha Figura">
+  <img src="media/index.jpg" alt="Minha Figura">
   <figcaption>Informações da Figura</figcaption>
 </figure>
     
