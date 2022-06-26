@@ -14,8 +14,8 @@ CRUD gestão de despesas com Java Spring
     <h1>Gerenciador de Tarefas</h1>
 
     
-    Tabela contendo todas as despesas registradas
-    Visualização do valor total de despesas
+    #Tabela contendo todas as despesas registradas
+    #Visualização do valor total de despesas
     
    
   <img src="media/index.jpg" alt="Minha Figura">
