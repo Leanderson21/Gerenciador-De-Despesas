@@ -1,4 +1,4 @@
-# Gerenciados-De-Despesas
+# Gerenciador-De-Despesas
 CRUD gestão de despesas com Java Spring
 
 
